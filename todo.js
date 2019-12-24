@@ -1,6 +1,6 @@
-const todoItems = JSON.parse(localStorage.getItem('todo')) || [];
+const todoItems = JSON.parse(localStorage.getItem('todoItems')) || [];
 
-window.addEventListener("load", pullFromLocal);
+//window.addEventListener("load", pullFromLocal);
 document.getElementById("js-form").addEventListener('submit', addTodo);
 
 function addTodo(e) {
@@ -16,9 +16,10 @@ function addTodo(e) {
         };
 
         todoItems.push(task);
-        localStorage.setItem('todo', JSON.stringify(task));
+        localStorage.setItem('todoItems', JSON.stringify(todoItems));
 
         console.log('The task is: ', task);
+        console.log('todoItems: ', todoItems);
     }
 
     document.getElementById("js-form").reset();
@@ -26,14 +27,17 @@ function addTodo(e) {
 
 };
 
-function pullFromLocal() {
-        const grabIt = localStorage.getItem('todo');
-        renderTask(grabIt);
+/*function pullFromLocal() {
+        
+        const localTodo = JSON.parse(localStorage.getItem('todoItems'))
+        todoItems.push(localTodo);
+        renderTask(localTodo);
+        
         console.log('I ran!');
-}
+}*/
 
 function renderTask() {
-
+    //pullFromLocal();
     const list = document.getElementById("js-todo-list");
 
     list.innerHTML = '';
@@ -45,13 +49,11 @@ function renderTask() {
             onclick="toggleTask(${todoItems[i].id})"
             id="${todoItems[i].id}" >
             ${todoItems[i].checked ? text.strike() : text}
-            <button class="delete-todo js-delete-todo"
-            onclick="deleteTask(${todoItems[i].id})">
-            <svg><use href="#delete-icon"></use></svg>
-          <button>
-        </li>
-        
-       `
+                <button class="delete-todo js-delete-todo"
+                    onclick="deleteTask(${todoItems[i].id})">
+                    <svg><use href="#delete-icon"></use></svg>
+                <button>
+        </li>`
     }
 };
 
