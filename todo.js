@@ -27,14 +27,6 @@ function addTodo(e) {
 
 };
 
-/*function pullFromLocal() {
-        
-        const localTodo = JSON.parse(localStorage.getItem('todoItems'))
-        todoItems.push(localTodo);
-        renderTask(localTodo);
-        
-        console.log('I ran!');
-}*/
 
 function renderTask() {
     //pullFromLocal();
@@ -63,7 +55,7 @@ function deleteTask(id) {
             todoItems.splice(i, 1);
         }
     }
-    localStorage.setItem('todo', JSON.stringify(todoItems));
+    localStorage.setItem('todoItems', JSON.stringify(todoItems));
     renderTask();
 };
 

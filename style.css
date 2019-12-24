@@ -51,18 +51,22 @@ html {
   
   .todo-item {
     margin-bottom: 10px;
+    margin-left: 90px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 27px
+
   }
   
+  /*
   .todo-item span {
     flex-grow: 1;
     margin-left: 10px;
     margin-right: 10px;
     font-size: 22px;
-  }
+  }*/
   
   .done span {
     text-decoration: line-through;
@@ -98,12 +102,15 @@ html {
     background-color: white;
     outline: none;
     cursor: pointer;
+    margin-right: -10%;
+    display: inline;
   }
   
   .delete-todo svg {
     width: 30px;
     height: 30px;
     pointer-events: none;
+    float: right;
   }
   
   form {
