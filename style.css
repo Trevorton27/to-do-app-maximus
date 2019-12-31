@@ -38,9 +38,12 @@ body {
     margin-bottom: 20px;
     padding-top: 10px;;
   }
-  
+  #js-form{
+    margin-top: 60px;
+  }
   #js-todo-list{
     padding-left: 0px;
+    
   }
   
   .todo-item {
