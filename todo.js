@@ -41,10 +41,10 @@ function renderTask() {
             onclick="toggleTask(${todoItems[i].id})"
             id="${todoItems[i].id}">
             ${todoItems[i].checked ? text.strike() : text}
-        <span> <button class="delete-todo js-delete-todo"
+        <span class="delete-todo js-delete-todo"
              onclick="deleteTask(${todoItems[i].id})">
              <svg><use href="#delete-icon"></use></svg>
-         <button></span>
+         </span>
         </li>`
     }
      
