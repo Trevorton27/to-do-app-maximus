@@ -37,16 +37,17 @@ function renderTask() {
     for(let i =0; i < todoItems.length; i++){
         let text = todoItems[i].text;
         list.innerHTML += `
-        <li class="todo-item" 
+        <li class="todo-item"    
             onclick="toggleTask(${todoItems[i].id})"
-            id="${todoItems[i].id}" >
+            id="${todoItems[i].id}">
             ${todoItems[i].checked ? text.strike() : text}
-                <button class="delete-todo js-delete-todo"
-                    onclick="deleteTask(${todoItems[i].id})">
-                    <svg><use href="#delete-icon"></use></svg>
-                <button>
+        <span> <button class="delete-todo js-delete-todo"
+             onclick="deleteTask(${todoItems[i].id})">
+             <svg><use href="#delete-icon"></use></svg>
+         <button></span>
         </li>`
     }
+     
 };
 
 function deleteTask(id) {
