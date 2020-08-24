@@ -63,18 +63,12 @@ input[type="checkbox"] {
   display: none;
 }
 
-.delete-todo {
-  border: none;
-  outline: none;
-  cursor: pointer;
 
-  display: inline;
-}
 
 .deleteButton {
   border-radius: 40%;
   background-color: #df392e;
-  padding: 3px 8px 3px 8px;
+  padding: 2px 8px 2px 8px;
   color: #fff;
   font-size: .7em;
   border-color: #df392e;
