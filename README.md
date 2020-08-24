@@ -1,4 +1,4 @@
-# to-do-app2
+# Todo App
 
  ###  A classic todo list app demonstrating proficiency with the DOM and local storage.
  
