@@ -28,11 +28,6 @@ body {
   opacity: 0.8;
 }
 
-svg {
-  width: 64px;
-  height: 64px;
-}
-
 .todo-list {
   list-style: none;
   margin-bottom: 20px;
@@ -66,9 +61,9 @@ input[type="checkbox"] {
 
 
 .deleteButton {
-  border-radius: 40%;
+  border-radius: 50%;
   background-color: #df392e;
-  padding: 2px 8px 2px 8px;
+  padding: 1px 7px 1px 7px;
   color: #fff;
   font-size: .7em;
   border-color: #df392e;
