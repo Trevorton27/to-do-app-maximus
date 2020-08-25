@@ -54,7 +54,8 @@ function renderTask() {
     deleteButton.textContent = 'X';
     span.appendChild(deleteButton);
 
-    deleteButton.addEventListener('click', () => {
+    deleteButton.addEventListener('click', (e) => {
+      e.stopPropagation();
       deleteTask(todoItems[i].id);
     });
   }
