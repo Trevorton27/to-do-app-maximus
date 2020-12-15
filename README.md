@@ -2,7 +2,7 @@
 
  ###  A classic todo list app demonstrating proficiency with the DOM and local storage.
  
-#### You can give it a go [here]( https://trevorton27.github.io/to-do-app2/)
+#### You can give it a go [here]( https://trevorton27.github.io/to-do-app-maximus/)
  
  ![](todo%20app%20screenshot.png)
  
