@@ -3,7 +3,7 @@ const todoItems = JSON.parse(localStorage.getItem('todoItems')) || [];
 document.getElementById('form').addEventListener('submit', addTodo);
 
 const submitButton = document.getElementById('submitButton');
-submitButton.addEventListener('click', addTodo);
+//submitButton.addEventListener('click', addTodo);
 
 function addTodo(e) {
   e.preventDefault();
@@ -14,7 +14,7 @@ function addTodo(e) {
     const task = {
       text,
       checked: false,
-      id: todoItems.length > 0 ? todoItems[todoItems.length - 1].id + 1 : 1,
+      id: Date.now()
     };
 
     todoItems.push(task);
@@ -67,7 +67,7 @@ function saveTodoItems() {
 
 function deleteTask(id) {
   for (let i = 0; i < todoItems.length; i++) {
-    if (todoItems[i].id == id) {
+    if (todoItems[i].id == id && todoItems[i].checked === true) {
       todoItems.splice(i, 1);
     }
   }
